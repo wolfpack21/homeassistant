@@ -1,0 +1,99 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+frontend:
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+#climate:
+#  - platform: generic_thermostat
+#    name: Study
+#    heater: switch.study_heater
+#    target_sensor: sensor.study_temperature
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+##############################################
+#         Testing Area
+# !include automations.yaml DOES work and nothing else does
+#automation: !include automations.yaml
+
+# "!include_dir_merge_list automations" does not work
+# Error code below:
+
+# Invalid config for [automation]: not a valid value for dictionary value @ data['action'][0]['entity_id']. 
+#Got None. (See /config/configuration.yaml, line 20). 
+#Please check the docs at https://home-assistant.io/components/automation/
+
+
+#!include dir_merge_named does not  work
+#automation: !include_dir_merge_named automations
+
+
+##############################################
+group: !include groups.yaml
+automation: !include_dir_merge_list automations/
+sensor: !include_dir_merge_list sensors/
+input_boolean: !include input_boolean.yaml
+script: !include_dir_merge_list scripts/
+scene: !include scenes.yaml
+
+zwave:
+  # usb_path: /dev/ttyACM0
+  usb_path: /dev/serial/by-id/usb-0658_0200-if00
+
+climate:
+  - platform: zwave
+
+speedtestdotnet:
+  scan_interval:
+    minutes: 60
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
+lutron_caseta:
+  host: 192.168.1.18
+  keyfile: /ssl/lutron/caseta.key
+  certfile: /ssl/lutron/caseta.crt
+  ca_certs: /ssl/lutron/caseta-bridge.crt
+  
+cloud:
+  alexa:
+    filter:
+#      include_entities:
+      include_domains:
+        - switch
+        - group
+        - scene
+        - input_boolean
+        - fan
+        - light
+        - script
+      exclude_entities:
+        - group.all_switches
+        - group.all_lights
+        - group.all_fans
+        - group.all_automations
+        - light.upstairs_hallway_repeater
+        - scene.flash_kitchen_lights_5
+        - scene.good_morning_scene
+        - scene.flash_kitchen_lights
+        
+august:
+  login_method: email
+  username: !secret august_user
+  password: !secret august_pass
+
+#influxdb:
+ # host: a0d7b954-influxdb
+  #port: 8086
+ # database: homeassistant
+  #username: homeassistant
+  #password: pa55w0rd
+#  max_retries: 3
+ # default_measurement: state

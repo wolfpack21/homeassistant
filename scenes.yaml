@@ -1,0 +1,165 @@
+#####################################################
+#                                                   #
+#            TABLE OF CONTENTS                      #
+#         1) Movie Mode                             #
+#         2) Good Night Routine                     #
+#         3) Where is Barb?  (suspended)            #
+#         4) TV Mode                                #
+#         5) Good Morning Routine                   #
+#                                                   #
+#####################################################
+
+#####################################################
+#                                                   #
+#         1) Movie Mode                             #
+#                                                   #
+#####################################################
+
+# Movie mode is triggered by saying "It's movie time"
+- name: Movie Mode
+  entities:
+    light.kitchen_island_lights:
+      state: on
+      brightness_pct: 5 
+      transition: 60
+    light.kitchen_cans:
+      state: off
+      transition: 10
+    light.den_cans:
+      state: on
+      brightness_pct: 0
+      transition: 60
+    light.nook_chandelier:
+      state: off
+      transition: 10
+    light.entry_chandelier:
+      state: off
+      transition: 10
+
+#####################################################
+#                                                   #
+#         2) Good Night Routine                     #
+#                                                   #
+#####################################################      
+# Good Night Routine
+- name: Good Night Scene
+  entities:
+    group.kitchen_lights:
+      state: off
+    light.den_cans:
+      state: off
+    light.living_room_chand:
+      state: off
+    light.entry_chandelier:
+      state: off
+    light.living_room_main_lights:
+      state: off
+    light.hall_cans:
+      state: off
+      transition: 60
+    fan.master_fan:
+      state: on
+    fan.den_fan:
+      state: off
+    fan.office_fan:
+      state: off
+    light.master_cans:
+      state: off
+      transition: 120
+      brightness_pct: 0
+    light.master_closet_anne:
+      state: off
+      transition: 120
+      brightness_pct: 0
+    light.master_closet_drew:
+      state: off
+      transition: 120
+      brightness_pct: 0
+    switch.stairs_main_lights:
+      state: off
+    light.upstairs_hallway:
+      state: off
+    light.dining_room:
+      state: off
+
+
+#####################################################
+#                                                   #
+#         3) Where is Barb?                         #
+#                                                   #
+#####################################################
+
+#- name: Where is Barb Scene
+#  entities:
+#    script.flash_kitchen_lights_5:
+#      state: true
+
+# Note: This was decomissioned and turned from a scene
+#       into an automation
+
+#####################################################
+#                                                   #
+#         4) TV Mode                                #
+#                                                   #
+#####################################################
+
+- name: TV Mode
+  entities:
+    light.kitchen_island_lights:
+      state: on
+      brightness_pct: 5 
+      transition: 10
+    light.kitchen_cans:
+      state: off
+      transition: 10
+    light.den_cans:
+      state: on
+      brightness_pct: 8 
+      transition: 45
+    light.nook_chandelier:
+      state: off
+      transition: 10
+    light.entry_chandelier:
+      state: off
+      transition: 10
+
+#####################################################
+#                                                   #
+#         5) Good Morning Routine                   #
+#                                                   #
+#####################################################
+- name: Good Morning Scene
+  entities:
+    fan.master_fan:
+      state: off
+    light.master_cans:
+      state: on
+      brightness_pct: 100
+      transition: 60
+    light.master_closet_anne:
+      state: on
+      brightness_pct: 100
+      transiton: 60
+    light.master_closet_drew:
+      state: on
+      brightness_pct: 100
+      transiton: 60
+    light.hall_cans:
+      state: on
+      brightness_pct: 100
+    light.kitchen_cans:
+      state: on
+      brightness_pct: 100
+    light.kitchen_island_lights:
+      state: on
+      brightness_pct: 100
+    light.entry_chandelier:
+      state: on
+    light.den_cans:
+      state: on
+
+# Lock test
+- name: lock test 2
+  entities:
+    script.lock_back_door:
+      state: true

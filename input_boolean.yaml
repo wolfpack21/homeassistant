@@ -1,0 +1,41 @@
+############################################
+#                                          #
+#               Home Modes                 #
+#                                          #
+############################################
+going_out:
+  name: Going Out Trigger
+#  inital: false
+  #icon: mdi:door
+    
+guest_mode:
+  name: Guest Mode Trigger
+#  inital: off
+  #icon: mdi:door
+    
+vacation_mode:
+  name: Vacation Mode Trigger
+#  initial: false
+  #icon: mdi:door
+  
+#alexa_test:
+#  name: Alexa Test
+#  initial: false
+  #icon: mdi:door
+  
+going_to_bed:
+  name: Going to Bed
+#  initial: false
+  
+game_day:
+  name: game day Trigger
+#  initial:false
+
+where_is_barb:
+  name: where is barb boolean
+  
+good_morning_trigger:
+  name: Good Moorning Trigger
+
+restart_trigger:
+  name: Restart Trigger

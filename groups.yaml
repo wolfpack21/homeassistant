@@ -1,0 +1,21 @@
+#group:
+exterior_lights:
+  name: "Exterior Lights"
+  entities:
+    - switch.outside_front_flood
+    - switch.outside_back_flood
+    - light.outside_front_stoop
+    
+kitchen_lights:
+  name: "Kitchen Lights"
+  entities:
+    - light.kitchen_cans
+    - light.kitchen_island_lights
+    - light.nook_chandelier
+    
+master_bedroom_lights:
+  name: "Bedroom Lights"
+  entities:
+    - light.master_cans
+    - light.master_closet_anne
+    - light.master_closet_drew
