@@ -1,0 +1,25 @@
+# start morning routine via alexa + input boolean
+
+- alias: 'Good Morning Automation'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.good_morning_trigger
+      to: 'on'
+      from: 'off'
+
+#  condition:
+  
+  action:
+    - service: scene.turn_on
+      entity_id: scene.good_morning_scene
+# wait
+#    - delay: '00:01:00'
+#
+    - service: script.turn_on
+      entity_id: script.good_morning_dim
+      
+# wait
+    - delay: '00:03:00'
+#
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.good_morning_trigger

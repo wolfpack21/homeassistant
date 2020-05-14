@@ -1,0 +1,16 @@
+- alias: 'Where is Barb?'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.where_is_barb
+      to: 'on'
+      from: 'off'
+
+#  condition:
+  
+  action:
+    - service: script.turn_on
+      entity_id:
+        - script.flash_kitchen_lights_5
+    - delay: '00:01:00'
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.where_is_barb

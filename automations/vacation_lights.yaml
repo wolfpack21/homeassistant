@@ -1,0 +1,110 @@
+# Turn on outdoor lights at sunset, turn off at 10:30pm
+
+#Turn outdoor lights on 30 minutes before sunset
+- alias: 'turn inside lights on'
+  trigger:
+    - platform: sun
+      event: sunset
+      offset: '-00:30:00'
+
+  condition:
+    condition: state
+    entity_id: input_boolean.vacation_mode
+    state: 'on'
+
+
+  action:
+    - service: light.turn_on
+      entity_id:
+        - light.den_cans
+        - light.kitchen_cans
+        - light.nook_chandelier
+        - light.nursery_lights
+        - light.living_room_main_lights
+        - light.master_cans
+
+#######################################
+#                                     #
+#  turn some inside lights off at 8pm #
+#                                     #
+#######################################
+
+- alias: 'turn some inside lights off at 8pm'
+  trigger:
+    - platform: time
+      at: '20:07'
+
+  condition:
+    condition: state
+    entity_id: input_boolean.vacation_mode
+    state: 'on'
+
+  action:
+    - service: light.turn_off
+      entity_id:
+        - light.nursery_lights
+        - light.nook_chandelier
+
+#########################################
+#                                       #
+#  turn some inside lights off at 930pm #
+#                                       #
+#########################################
+
+- alias: 'turn some inside lights off at 930pm'
+  trigger:
+    - platform: time
+      at: '21:36'
+
+  condition:
+    condition: state
+    entity_id: input_boolean.vacation_mode
+    state: 'on'
+
+  action:
+    - service: light.turn_off
+      entity_id:
+        - light.living_room_main_lights
+        - light.kitchen_cans
+
+########################################
+#                                      #
+#  turn some inside lights off at 10pm #
+#                                      #
+########################################
+        
+- alias: 'turn some inside lights off at 10pm'
+  trigger:
+    - platform: time
+      at: '22:11'
+
+  condition:
+    condition: state
+    entity_id: input_boolean.vacation_mode
+    state: 'on'
+
+  action:
+    - service: light.turn_off
+      entity_id:
+        - light.den_cans
+
+########################################
+#                                      #
+#  turn some inside lights off at 11pm #
+#                                      #
+########################################
+
+- alias: 'turn some inside lights off at 11pm'
+  trigger:
+    - platform: time
+      at: '23:21'
+
+  condition:
+    condition: state
+    entity_id: input_boolean.vacation_mode
+    state: 'on'
+
+  action:
+    - service: light.turn_off
+      entity_id:
+        - light.master_cans

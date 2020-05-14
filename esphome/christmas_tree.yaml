@@ -1,0 +1,49 @@
+esphome:
+  name: christmas_tree
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: "ESP8266_IOT"
+  password: "abcd1234"
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Christmas Tree"
+    on_press:
+      - switch.toggle: relay
+
+switch:
+  - platform: gpio
+    name: "Christmas Tree"
+    pin: GPIO12
+    id: relay
+
+status_led:
+  pin:
+    number: GPIO13
+    inverted: yes
+
+sensor:
+  - platform: wifi_signal
+    name: "Christmas Tree WiFi signal"
+    update_interval: 120s
+
+  - platform: uptime
+    name: "Christmas Tree uptime"
+
+text_sensor:
+  - platform: version
+    name: "Christmas Tree ESPHome version"

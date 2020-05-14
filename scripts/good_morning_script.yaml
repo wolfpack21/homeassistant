@@ -1,0 +1,39 @@
+good_morning_script:
+  alias: 'Good Morning Script'
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.master_cans
+        brightness_pct: 100
+        transition: 60
+    - service: light.turn_on
+      data:
+        entity_id: light.master_closet_anne
+        brightness_pct: 100
+        transition: 60
+    - service: light.turn_on
+      data:
+        entity_id: light.master_closet_drew
+        brightness_pct: 100
+        transition: 60
+    - service: light.turn_on
+      data:
+        entity_id: light.hall_cans
+        brightness_pct: 100
+        transition: 10
+    - service: light.turn_on
+      data:
+        entity_id: group.kitchen_lights
+        brightness_pct: 100
+    - service: light.turn_on
+      data:
+        entity_id: light.entry_chandelier
+        brightness_pct: 100
+    - service: light.turn_on
+      data:
+        entity_id: light.den_cans
+        brightness_pct: 100
+        transition: 10
+    - service: fan.turn_off
+      data:
+        entity_id: fan.master_fan

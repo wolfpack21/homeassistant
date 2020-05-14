@@ -1,0 +1,15 @@
+- alias: "Good Night Routine 2"
+  trigger:
+  - platform: state
+    entity_id: input_boolean.going_to_bed
+    from: 'off'
+    to: 'on'
+
+  action:
+  - service: scene.turn_on
+    entity_id: scene.good_night_scene
+
+  - delay: 120
+
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.going_to_bed

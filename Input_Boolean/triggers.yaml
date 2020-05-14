@@ -1,0 +1,15 @@
+# triggers
+
+movie_trigger:
+  name: Movie Mode
+  inital: off
+  #icon: mdi:door
+    
+game_day_trigger:
+  name: Game Day
+  inital: off
+  #icon: mdi:door
+    
+good_night_trigger:
+  name: Good Night
+  initial: off

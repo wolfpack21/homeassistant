@@ -1,0 +1,16 @@
+# home modes
+
+going_out_mode:
+  name: Going Out
+  inital: off
+  #icon: mdi:door
+    
+guest_mode:
+  name: Guest Mode
+  inital: off
+  #icon: mdi:door
+    
+vacation_mode:
+  name: Vacation Mode
+  initial: off
+  #icon: mdi:door

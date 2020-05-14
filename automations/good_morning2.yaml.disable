@@ -1,0 +1,23 @@
+- alias: "Good Morning Routine 2"
+  trigger:
+  - platform: state
+    entity_id: input_boolean.good_morning_trigger
+    from: 'off'
+    to: 'on'
+
+  action:
+  - service: light.turn_on
+    entity_id:
+      - light.kitchen_cans
+      - light.kitchen_island_lights
+      - light.nook_chandelier
+      - light.hall_cans
+      - light.master_closet_drew
+      - light.master_closet_anne
+      - light.master_cans
+      - light.entry_chandelier
+
+  - delay: '00:01:00'
+
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.good_morning_trigger

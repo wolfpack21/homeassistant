@@ -1,0 +1,12 @@
+- alias: Restart HA
+  trigger: 
+    - platform: state
+      entity_id: input_boolean.restart_trigger
+      to: 'on'
+      from: 'off'
+
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.restart_trigger
+    - delay: '00:00:02'
+    - service: homeassistant.restart

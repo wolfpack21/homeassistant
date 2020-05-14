@@ -1,0 +1,46 @@
+- alias: 'Good Night Trigger'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.going_to_bed
+      to: 'on'
+      from: 'off'
+
+#  condition:
+  
+  action:
+    - service: light.turn_off
+      entity_id:
+        - light.kitchen_cans
+        - light.kitchen_island_lights
+        - light.nook_chandelier
+        - light.den_cans
+        - light.living_room_chand
+        - light.entry_chandelier
+        - light.living_room_main_lights
+        - light.hall_cans
+        - light.outside_front_stoop
+        - light.outside_front_flood
+        - light.outside_back_flood
+    - service: fan.turn_on
+      entity_id:
+        - fan.master_fan
+        # add Set fan speed?
+    # add  Dim master lights over 5 minutes
+    - service: light.turn_off
+      entity_id:
+        - light.master_cans
+        - light.master_closet_anne
+        - light.master_closet_drew
+        #- group.bedroom_lights
+      #  ** Data section doesnt work due to zwave switch model, need to upgrade **
+        #data:
+        #transition: 600 # Transition time in seconds {10 mins}
+        #brightness: 00
+    # Turn the boolean back to off position
+    - service: switch.turn_off
+      entity_id:
+        - switch.anne_s_lamp
+        - switch.drew_s_lamp
+    - delay: '00:15:00'
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.going_to_bed

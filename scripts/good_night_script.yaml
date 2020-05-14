@@ -1,0 +1,39 @@
+good_night_script:
+  alias: 'Good Night Script'
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id: light.master_cans
+        transition: 60
+
+    - service: light.turn_off
+      data:
+        entity_id: light.master_closet_anne
+        transition: 60
+
+    - service: light.turn_off
+      data:
+        entity_id: light.master_closet_drew
+        transition: 60
+
+    - service: light.turn_off
+      data:
+        entity_id: light.hall_cans
+        transition: 60
+
+    - service: light.turn_off
+      data:
+        entity_id: group.kitchen_lights
+
+    - service: light.turn_off
+      data:
+        entity_id: light.entry_chandelier
+
+    - service: light.turn_off
+      data:
+        entity_id: light.den_cans
+        transition: 10
+
+    - service: fan.turn_on
+      data:
+        entity_id: fan.master_fan

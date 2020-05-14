@@ -1,0 +1,10 @@
+- alias: 'light test'
+  trigger:
+    - platform: time
+      at: '20:53'
+
+  action:
+    - service: light.turn_off
+      entity_id: 
+        - light.nook_chandelier
+

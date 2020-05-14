@@ -1,0 +1,45 @@
+esphome:
+  name: drews_lamp_button
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: "ESP8266_IOT"
+  password: "abcd1234"
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO5
+      #mode: INPUT_PULLUP
+      #inverted: True
+    name: "Drews Lamp Button"
+    on_press:
+      - switch.toggle: relay
+    internal: true
+    
+switch:
+  - platform: gpio
+    name: "Drews Lamp Button Switch"
+    pin: GPIO15
+    id: relay
+
+sensor:
+  - platform: wifi_signal
+    name: "Drew's Lamp Button WiFi signal"
+    update_interval: 120s
+
+  - platform: uptime
+    name: "Drew's Lamp Button uptime"
+
+text_sensor:
+  - platform: version
+    name: "Drew's Lamp Button ESPHome version"

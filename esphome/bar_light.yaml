@@ -1,0 +1,16 @@
+esphome:
+  name: bar_light
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: "ESP8266"
+  password: "abcd1234"
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
