@@ -15,3 +15,5 @@
 ip_bans.yaml
 secrets.yaml
 known_devices.yaml
+.august.conf
+home-assistant_v2.db
