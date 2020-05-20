@@ -1,3 +1,5 @@
 - platform: systemmonitor
   resources:
     - type: last_boot
+    - type: memory_use_percent
+    - type: processor_use

@@ -89,11 +89,15 @@ august:
   username: !secret august_user
   password: !secret august_pass
 
-#influxdb:
- # host: a0d7b954-influxdb
-  #port: 8086
- # database: homeassistant
-  #username: homeassistant
-  #password: pa55w0rd
+# influxdb:
+#  host: a0d7b954-influxdb
+#   port: 8086
+#  database: homeassistant
+#   username: homeassistant
+#   password: pa55w0rd
 #  max_retries: 3
- # default_measurement: state
+#  default_measurement: state
+
+# media_player:
+#   - platform: aquostv
+#     host: 192.168.0.10  << Update w/ correct IP
