@@ -1,0 +1,22 @@
+
+
+2) Upstairs Therm
+3) Downstairs Therm
+4) Master Therm
+5) Master Cans
+6) Drews Closet
+7) Annes Closet
+8) Master fan
+9) hallway
+10) entry
+11) coat closet
+12) den cans
+13) den fan
+14) office fan
+
+Added 5/27
+26)
+27)
+28)
+29) Homeseer, Future Master Cans
+30) Recepticle TBD

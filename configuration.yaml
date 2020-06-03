@@ -101,3 +101,7 @@ august:
 # media_player:
 #   - platform: aquostv
 #     host: 192.168.0.10  << Update w/ correct IP
+
+# I believe this was already configured via UI and yaml config not needed
+#hacs:
+#  token: !secret hacs_token

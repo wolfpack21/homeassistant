@@ -1,0 +1,16 @@
+New Automations
+
+1) Dim lights between mbr and kitchen when door is opened between 11 pm and sunrise
+
+2) 
+
+Add to existing Automations
+
+1) Turn off TV during good night command/routine
+
+
+Improvements
+
+1) Add Samba Share
+2) What are packages?
+3) 
