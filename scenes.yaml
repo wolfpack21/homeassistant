@@ -81,6 +81,14 @@
       state: off
     light.dining_room:
       state: off
+    light.master_shower:
+      state: off
+    light.toilet_lights:
+      state: off
+    light.master_sink_lights:
+      state: off
+    light.master_bath_cans:
+      state: off
 
 
 #####################################################
