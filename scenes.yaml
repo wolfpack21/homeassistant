@@ -85,7 +85,7 @@
       state: off
     light.toilet_lights:
       state: off
-    light.master_sink_lights:
+    light.master_sink_light:
       state: off
     light.master_bath_cans:
       state: off

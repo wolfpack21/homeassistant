@@ -2177,3 +2177,7 @@ sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled b
 2020-06-09 11:57:40 ERROR (Thread-51) [pychromecast.socket_client] [SHIELD(192.168.1.13):8009] Failed to connect to service SHIELD-Android-TV-d7b165773d930d2c4386d9b35f43eced._googlecast._tcp.local., retrying in 5.0s
 2020-06-09 11:58:25 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_battery_level
 2020-06-09 11:58:25 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_wifi_connection
+2020-06-09 12:00:51 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_battery_level
+2020-06-09 12:00:51 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_wifi_connection
+2020-06-09 12:04:17 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_battery_level
+2020-06-09 12:04:17 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_wifi_connection
