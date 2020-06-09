@@ -2181,3 +2181,111 @@ sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled b
 2020-06-09 12:00:51 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_wifi_connection
 2020-06-09 12:04:17 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_battery_level
 2020-06-09 12:04:17 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_wifi_connection
+2020-06-09 12:09:15 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_battery_level
+2020-06-09 12:09:15 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_wifi_connection
+2020-06-09 12:11:18 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_battery_level
+2020-06-09 12:11:18 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_wifi_connection
+2020-06-09 12:14:15 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_battery_level
+2020-06-09 12:14:15 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_wifi_connection
+2020-06-09 12:14:15 ERROR (Recorder) [homeassistant.components.recorder] Error adding event: (sqlite3.DatabaseError) database disk image is malformed
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('timer_out_of_sync', '{"seconds": 1.5405424099990341}', 'LOCAL', '2020-06-09 16:14:15.619974', '2020-06-09 16:14:15.647732', '2a2c98dd3f854db3b485d6f67ea509a4', None)]
+(Background on this error at: http://sqlalche.me/e/4xp6)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.DatabaseError: database disk image is malformed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 372, in run
+    self.event_session.flush()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('timer_out_of_sync', '{"seconds": 1.5405424099990341}', 'LOCAL', '2020-06-09 16:14:15.619974', '2020-06-09 16:14:15.647732', '2a2c98dd3f854db3b485d6f67ea509a4', None)]
+(Background on this error at: http://sqlalche.me/e/4xp6)
+2020-06-09 12:14:15 ERROR (Recorder) [homeassistant.components.recorder] Error adding event: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.DatabaseError) database disk image is malformed
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('timer_out_of_sync', '{"seconds": 1.5405424099990341}', 'LOCAL', '2020-06-09 16:14:15.619974', '2020-06-09 16:14:15.647732', '2a2c98dd3f854db3b485d6f67ea509a4', None)]
+(Background on this error at: http://sqlalche.me/e/4xp6) (Background on this error at: http://sqlalche.me/e/7s2a)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 372, in run
+    self.event_session.flush()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2592, in _flush
+    subtransactions=True
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 947, in begin
+    self.transaction = self.transaction._begin(nested=nested)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 316, in _begin
+    self._assert_active()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 295, in _assert_active
+    code="7s2a",
+sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.DatabaseError) database disk image is malformed
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('timer_out_of_sync', '{"seconds": 1.5405424099990341}', 'LOCAL', '2020-06-09 16:14:15.619974', '2020-06-09 16:14:15.647732', '2a2c98dd3f854db3b485d6f67ea509a4', None)]
+(Background on this error at: http://sqlalche.me/e/4xp6) (Background on this error at: http://sqlalche.me/e/7s2a)
+2020-06-09 12:14:16 ERROR (Recorder) [homeassistant.components.recorder] Error executing query: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.DatabaseError) database disk image is malformed
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('timer_out_of_sync', '{"seconds": 1.5405424099990341}', 'LOCAL', '2020-06-09 16:14:15.619974', '2020-06-09 16:14:15.647732', '2a2c98dd3f854db3b485d6f67ea509a4', None)]
+(Background on this error at: http://sqlalche.me/e/4xp6) (Background on this error at: http://sqlalche.me/e/7s2a)
+2020-06-09 12:14:16 ERROR (Recorder) [homeassistant.components.recorder] Error saving events: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.DatabaseError) database disk image is malformed
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('timer_out_of_sync', '{"seconds": 1.5405424099990341}', 'LOCAL', '2020-06-09 16:14:15.619974', '2020-06-09 16:14:15.647732', '2a2c98dd3f854db3b485d6f67ea509a4', None)]
+(Background on this error at: http://sqlalche.me/e/4xp6) (Background on this error at: http://sqlalche.me/e/7s2a)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 419, in _commit_event_session_or_retry
+    self._commit_event_session()
+  File "/usr/src/homeassistant/homeassistant/components/recorder/__init__.py", line 470, in _commit_event_session
+    self.event_session.commit()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 501, in commit
+    self._assert_active(prepared_ok=True)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 295, in _assert_active
+    code="7s2a",
+sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.DatabaseError) database disk image is malformed
+[SQL: INSERT INTO events (event_type, event_data, origin, time_fired, created, context_id, context_user_id) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('timer_out_of_sync', '{"seconds": 1.5405424099990341}', 'LOCAL', '2020-06-09 16:14:15.619974', '2020-06-09 16:14:15.647732', '2a2c98dd3f854db3b485d6f67ea509a4', None)]
+(Background on this error at: http://sqlalche.me/e/4xp6) (Background on this error at: http://sqlalche.me/e/7s2a)
+2020-06-09 12:16:56 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_battery_level
+2020-06-09 12:16:56 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_wifi_connection
+2020-06-09 12:21:40 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_battery_level
+2020-06-09 12:21:40 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 17976dc5924793db4279cc2ead927ed9035a26648ab153354b55984299b199f6_wifi_connection

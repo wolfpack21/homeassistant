@@ -5057,3 +5057,39 @@
 2020-06-09 11:39:30.057 Detail, Node026, Refreshed Value: old value=99, new value=0, type=byte
 2020-06-09 11:39:30.057 Detail, Node026, Changes to this value are not verified
 2020-06-09 11:39:30.057 Detail, Node026, Notification: ValueChanged
+2020-06-09 12:17:06.186 Detail, Node003,   Received: 0x01, 0x0b, 0x00, 0x04, 0x08, 0x03, 0x05, 0x43, 0x03, 0x02, 0x09, 0x46, 0xf3
+2020-06-09 12:17:06.190 Detail, 
+2020-06-09 12:17:06.194 Detail, Node003, Refreshed Value: old value=68, new value=70, type=decimal
+2020-06-09 12:17:06.194 Detail, Node003, Changes to this value are not verified
+2020-06-09 12:17:06.194 Info, Node003, Received thermostat setpoint report: Setpoint Cooling 1 = 70F
+2020-06-09 12:17:06.194 Detail, Node003, Notification: ValueChanged
+2020-06-09 12:17:06.220 Detail, Node003,   Received: 0x01, 0x0b, 0x00, 0x04, 0x00, 0x03, 0x05, 0x43, 0x03, 0x02, 0x09, 0x46, 0xfb
+2020-06-09 12:17:06.220 Detail, 
+2020-06-09 12:17:06.220 Detail, Node003, Refreshed Value: old value=70, new value=70, type=decimal
+2020-06-09 12:17:06.220 Detail, Node003, Changes to this value are not verified
+2020-06-09 12:17:06.220 Info, Node003, Received thermostat setpoint report: Setpoint Cooling 1 = 70F
+2020-06-09 12:17:06.220 Detail, Node003, Notification: ValueChanged
+2020-06-09 12:17:06.241 Detail, Node003,   Received: 0x01, 0x0c, 0x00, 0x04, 0x08, 0x03, 0x06, 0x31, 0x05, 0x01, 0x2a, 0x02, 0xb7, 0x50
+2020-06-09 12:17:06.241 Detail, 
+2020-06-09 12:17:06.242 Info, Node003, Received SensorMultiLevel report from node 3, instance 1, Temperature: value=69.5F
+2020-06-09 12:17:06.242 Detail, Node003, Refreshed Value: old value=70.0, new value=69.5, type=decimal
+2020-06-09 12:17:06.242 Detail, Node003, Changes to this value are not verified
+2020-06-09 12:17:06.242 Detail, Node003, Notification: ValueChanged
+2020-06-09 12:17:06.247 Detail, Node003,   Received: 0x01, 0x0c, 0x00, 0x04, 0x00, 0x03, 0x06, 0x31, 0x05, 0x01, 0x2a, 0x02, 0xb7, 0x58
+2020-06-09 12:17:06.247 Detail, 
+2020-06-09 12:17:06.247 Info, Node003, Received SensorMultiLevel report from node 3, instance 1, Temperature: value=69.5F
+2020-06-09 12:17:06.247 Detail, Node003, Refreshed Value: old value=69.5, new value=69.5, type=decimal
+2020-06-09 12:17:06.247 Detail, Node003, Changes to this value are not verified
+2020-06-09 12:17:06.247 Detail, Node003, Notification: ValueChanged
+2020-06-09 12:17:11.707 Detail, Node003,   Received: 0x01, 0x0b, 0x00, 0x04, 0x08, 0x03, 0x05, 0x43, 0x03, 0x02, 0x09, 0x47, 0xf2
+2020-06-09 12:17:11.707 Detail, 
+2020-06-09 12:17:11.707 Detail, Node003, Refreshed Value: old value=70, new value=71, type=decimal
+2020-06-09 12:17:11.707 Detail, Node003, Changes to this value are not verified
+2020-06-09 12:17:11.707 Info, Node003, Received thermostat setpoint report: Setpoint Cooling 1 = 71F
+2020-06-09 12:17:11.707 Detail, Node003, Notification: ValueChanged
+2020-06-09 12:17:11.720 Detail, Node003,   Received: 0x01, 0x0b, 0x00, 0x04, 0x00, 0x03, 0x05, 0x43, 0x03, 0x02, 0x09, 0x47, 0xfa
+2020-06-09 12:17:11.720 Detail, 
+2020-06-09 12:17:11.720 Detail, Node003, Refreshed Value: old value=71, new value=71, type=decimal
+2020-06-09 12:17:11.720 Detail, Node003, Changes to this value are not verified
+2020-06-09 12:17:11.720 Info, Node003, Received thermostat setpoint report: Setpoint Cooling 1 = 71F
+2020-06-09 12:17:11.720 Detail, Node003, Notification: ValueChanged
