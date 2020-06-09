@@ -5093,3 +5093,29 @@
 2020-06-09 12:17:11.720 Detail, Node003, Changes to this value are not verified
 2020-06-09 12:17:11.720 Info, Node003, Received thermostat setpoint report: Setpoint Cooling 1 = 71F
 2020-06-09 12:17:11.720 Detail, Node003, Notification: ValueChanged
+2020-06-09 12:39:42.617 Info, mgr,     Manager::WriteConfig completed for driver with home ID of 0xe33f9e3d
+2020-06-09 12:39:43.619 Info, mgr,     Driver for controller /dev/serial/by-id/usb-0658_0200-if00 pending removal
+2020-06-09 12:39:43.619 Detail, Notification: DriverRemoved
+2020-06-09 12:39:43.619 Always, ***************************************************************************
+2020-06-09 12:39:43.619 Always, *********************  Cumulative Network Statistics  *********************
+2020-06-09 12:39:43.619 Always, *** General
+2020-06-09 12:39:43.619 Always, Driver run time: . .  . 0 days, 2 hours, 50 minutes
+2020-06-09 12:39:43.619 Always, Frames processed: . . . . . . . . . . . . . . . . . . . . 516
+2020-06-09 12:39:43.619 Always, Total messages successfully received: . . . . . . . . . . 516
+2020-06-09 12:39:43.619 Always, Total Messages successfully sent: . . . . . . . . . . . . 205
+2020-06-09 12:39:43.619 Always, ACKs received from controller:  . . . . . . . . . . . . . 204
+2020-06-09 12:39:43.619 Always, *** Errors
+2020-06-09 12:39:43.619 Always, Unsolicited messages received while waiting for ACK:  . . 0
+2020-06-09 12:39:43.619 Always, Reads aborted due to timeouts:  . . . . . . . . . . . . . 0
+2020-06-09 12:39:43.619 Always, Bad checksum errors:  . . . . . . . . . . . . . . . . . . 0
+2020-06-09 12:39:43.619 Always, CANs received from controller:  . . . . . . . . . . . . . 1
+2020-06-09 12:39:43.619 Always, NAKs received from controller:  . . . . . . . . . . . . . 0
+2020-06-09 12:39:43.619 Always, Out of frame data flow errors:  . . . . . . . . . . . . . 0
+2020-06-09 12:39:43.619 Always, Messages retransmitted: . . . . . . . . . . . . . . . . . 1
+2020-06-09 12:39:43.619 Always, Messages dropped and not delivered: . . . . . . . . . . . 8
+2020-06-09 12:39:43.619 Always, ***************************************************************************
+2020-06-09 12:39:43.619 Detail, WriteMsg Wait Timeout m_currentMsg=00000000
+2020-06-09 12:39:45.712 Info, mgr,     Driver for controller /dev/serial/by-id/usb-0658_0200-if00 removed
+2020-06-09 12:39:46.745 Error, mgr,     Manager::GetDriver failed - Home ID 0xe33f9e3d is unknown
+2020-06-09 12:39:46.758 Warning, Exception: Manager.cpp:373 - 100 - Invalid HomeId passed to GetDriver
+2020-06-09 12:39:46.760 Info, mgr,     GetSendQueueCount() failed - _homeId -482369987 not found
