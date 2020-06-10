@@ -18,3 +18,6 @@
         entity_id: light.master_cans
         transition: 255
         brightness_pct: 60
+    - delay: '00:05:00'
+    - service: light.turn_on
+      entity_id: light.master_closet_anne
