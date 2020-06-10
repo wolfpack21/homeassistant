@@ -1,0 +1,20 @@
+- alias: 'covid wakeup lights'
+  trigger:
+    - platform: time
+      at: '06:15'
+
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.master_cans
+        transition: 255
+        brightness_pct: 60
