@@ -3,7 +3,7 @@
 2) Upstairs Therm
 3) Downstairs Therm
 4) Master Therm
-5) Master Cans
+5) Master Cans > changed 05-2020
 6) Drews Closet
 7) Annes Closet
 8) Master fan
@@ -18,5 +18,5 @@ Added 5/27
 26)
 27)
 28)
-29) Homeseer, Future Master Cans
+29) Homeseer,  Master Cans
 30) Recepticle TBD
