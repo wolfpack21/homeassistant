@@ -18,7 +18,7 @@
   
 
 
-# Turn outdoor lights off at 10:30 pm      
+# Turn outdoor lights off at 11:00 pm      
 - alias: 'turn outdoor lights off'
   trigger:
     - platform: time
