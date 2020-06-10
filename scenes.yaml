@@ -6,6 +6,7 @@
 #         3) Where is Barb?  (suspended)            #
 #         4) TV Mode                                #
 #         5) Good Morning Routine                   #
+#         6) Master Dim Test                        #
 #                                                   #
 #####################################################
 
@@ -166,8 +167,15 @@
     light.den_cans:
       state: on
 
-# Lock test
-- name: lock test 2
+#####################################################
+#                                                   #
+#         6) Master Dim Test                        #
+#                                                   #
+#####################################################
+
+- name: master dim test
   entities:
-    script.lock_back_door:
-      state: true
+    light.master_cans:
+      state: off
+      transition: 60
+      brightness_pct: 0
