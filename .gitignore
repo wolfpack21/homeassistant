@@ -17,3 +17,5 @@ secrets.yaml
 known_devices.yaml
 .august.conf
 home-assistant_v2.db
+home-assistant.log
+OZW_Log.txt
