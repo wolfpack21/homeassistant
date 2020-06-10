@@ -143,7 +143,7 @@
     light.master_cans:
       state: on
       brightness_pct: 100
-      transition: 60
+      transition: 20
     light.master_closet_anne:
       state: on
       brightness_pct: 100
