@@ -65,7 +65,7 @@
       state: off
     light.master_cans:
       state: off
-      transition: 120
+      transition: 60
       brightness_pct: 0
     light.master_closet_anne:
       state: off
