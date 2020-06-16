@@ -1,0 +1,13 @@
+- alias: Water Closet Fan & Light turn on
+  trigger: 
+    - platform: state
+      entity_id: binary_sensor.master_toilet
+      to: 'on'
+      from: 'off'
+
+  action:
+    - service: light.turn_on
+      entity_id: light.toilet_lights
+    - service: switch.turn_on
+      entity_id: switch.master_bath_fan
+
