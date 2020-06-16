@@ -2,8 +2,8 @@
   trigger: 
     - platform: state
       entity_id: binary_sensor.master_toilet
-      to: 'off'
-      from: 'on'
+      to: 'on'
+      from: 'off'
 
   action:
     - service: light.turn_off
