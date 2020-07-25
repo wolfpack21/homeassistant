@@ -1,7 +1,7 @@
 - alias: 'covid wakeup lights'
   trigger:
     - platform: time
-      at: '06:15'
+      at: '07:00'
 
   condition:
     condition: time
