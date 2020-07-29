@@ -108,3 +108,4 @@ august:
 #  token: !secret hacs_token
 
 #customize: !include customize.yaml
+breaking_changes:
