@@ -74,6 +74,7 @@ cloud:
         - fan
         - light
         - script
+        - cover
       exclude_entities:
         - group.all_switches
         - group.all_lights
@@ -105,3 +106,5 @@ august:
 # I believe this was already configured via UI and yaml config not needed
 #hacs:
 #  token: !secret hacs_token
+
+#customize: !include customize.yaml
