@@ -13,3 +13,7 @@ game_day_trigger:
 good_night_trigger:
   name: Good Night
   initial: off
+
+den_blinds_trigger:
+  name: den blinds trigger
+  initial: off
