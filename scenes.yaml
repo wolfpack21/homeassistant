@@ -90,6 +90,12 @@
       state: 'off'
     light.master_bath_cans:
       state: 'off'
+    group.all_den_blinds:
+      state: 'closed'
+    group.all_office_blinds:
+      state: 'closed'
+    group.all_master_blinds:
+      state: 'closed'
 
 
 #####################################################
