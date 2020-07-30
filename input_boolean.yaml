@@ -39,3 +39,6 @@ good_morning_trigger:
 
 restart_trigger:
   name: Restart Trigger
+
+den_blinds_trigger:
+  name: den blinds trigger
