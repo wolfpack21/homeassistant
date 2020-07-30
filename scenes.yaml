@@ -20,21 +20,21 @@
 - name: Movie Mode
   entities:
     light.kitchen_island_lights:
-      state: on
+      state: 'on'
       brightness_pct: 5 
       transition: 60
     light.kitchen_cans:
-      state: off
+      state: 'off'
       transition: 10
     light.den_cans:
-      state: on
+      state: 'on'
       brightness_pct: 0
       transition: 60
     light.nook_chandelier:
-      state: off
+      state: 'off'
       transition: 10
     light.entry_chandelier:
-      state: off
+      state: 'off'
       transition: 10
 
 #####################################################
@@ -46,50 +46,50 @@
 - name: Good Night Scene
   entities:
     group.kitchen_lights:
-      state: off
+      state: 'off'
     light.den_cans:
-      state: off
+      state: 'off'
     light.living_room_chand:
-      state: off
+      state: 'off'
     light.entry_chandelier:
-      state: off
+      state: 'off'
     light.living_room_main_lights:
-      state: off
+      state: 'off'
     light.hall_cans:
-      state: off
+      state: 'off'
       transition: 60
     fan.master_fan:
-      state: on
+      state: 'on'
     fan.den_fan:
-      state: off
+      state: 'off'
     fan.office_fan:
-      state: off
+      state: 'off'
     light.master_cans:
-      state: off
+      state: 'off'
       transition: 60
       brightness_pct: 0
     light.master_closet_anne:
-      state: off
+      state: 'off'
       transition: 120
       brightness_pct: 0
     light.master_closet_drew:
-      state: off
+      state: 'off'
       transition: 120
       brightness_pct: 0
     switch.stairs_main_lights:
-      state: off
+      state: 'off'
     light.upstairs_hallway:
-      state: off
+      state: 'off'
     light.dining_room:
-      state: off
+      state: 'off'
     light.master_shower:
-      state: off
+      state: 'off'
     light.toilet_lights:
-      state: off
+      state: 'off'
     light.master_sink_light:
-      state: off
+      state: 'off'
     light.master_bath_cans:
-      state: off
+      state: 'off'
 
 
 #####################################################
@@ -115,21 +115,21 @@
 - name: TV Mode
   entities:
     light.kitchen_island_lights:
-      state: on
+      state: 'on'
       brightness_pct: 5 
       transition: 10
     light.kitchen_cans:
-      state: off
+      state: 'off'
       transition: 10
     light.den_cans:
-      state: on
+      state: 'on'
       brightness_pct: 8 
       transition: 45
     light.nook_chandelier:
-      state: off
+      state: 'off'
       transition: 10
     light.entry_chandelier:
-      state: off
+      state: 'off'
       transition: 10
 
 #####################################################
@@ -140,32 +140,32 @@
 - name: Good Morning Scene
   entities:
     fan.master_fan:
-      state: off
+      state: 'off'
     light.master_cans:
-      state: on
+      state: 'on'
       brightness_pct: 100
       transition: 20
     light.master_closet_anne:
-      state: on
+      state: 'on'
       brightness_pct: 100
       transiton: 60
     light.master_closet_drew:
-      state: on
+      state: 'on'
       brightness_pct: 100
       transiton: 60
     light.hall_cans:
-      state: on
+      state: 'on'
       brightness_pct: 100
     light.kitchen_cans:
-      state: on
+      state: 'on'
       brightness_pct: 100
     light.kitchen_island_lights:
-      state: on
+      state: 'on'
       brightness_pct: 100
     light.entry_chandelier:
-      state: on
+      state: 'on'
     light.den_cans:
-      state: on
+      state: 'on'
     cover.den_blinds_1:
       state: 'open'
     cover.den_blinds_2:
@@ -185,6 +185,6 @@
 - name: master dim test
   entities:
     light.master_cans:
-      state: off
+      state: 'off'
       transition: 60
       brightness_pct: 0
