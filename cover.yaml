@@ -1,0 +1,22 @@
+cover:
+  - platform: group
+    name: Den Blinds
+    entities:
+      - cover.den_blinds_1
+      - cover.den_blinds_2
+      - cover.den_blinds_3
+      - cover.den_blinds_4
+
+  - platform: group
+    name: Master Blinds
+    entities:
+      - cover.master_blinds_1
+      - cover.master_blinds_2
+      - cover.master_blinds_3
+      - cover.master_blinds_4
+
+  - platform: group
+    name: Office Blinds
+    entities:
+      - cover.office_blinds_1
+      - cover.office_blinds_2
