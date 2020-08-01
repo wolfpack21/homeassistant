@@ -20,24 +20,24 @@ master_bedroom_lights:
     - light.master_closet_anne
     - light.master_closet_drew
 
-all_den_blinds:
-  name: "All Den Blinds"
-  entities:
-    - cover.den_blinds_1
-    - cover.den_blinds_2
-    - cover.den_blinds_3
-    - cover.den_blinds_4
+# all_den_blinds:
+#   name: "All Den Blinds"
+#   entities:
+#     - cover.den_blinds_1
+#     - cover.den_blinds_2
+#     - cover.den_blinds_3
+#     - cover.den_blinds_4
 
-all_master_blinds:
-  name: "All Master Blinds"
-  entities:
-    - cover.master_blinds_1
-    - cover.master_blinds_2
-    - cover.master_blinds_3
-    - cover.master_blinds_4
+# all_master_blinds:
+#   name: "All Master Blinds"
+#   entities:
+#     - cover.master_blinds_1
+#     - cover.master_blinds_2
+#     - cover.master_blinds_3
+#     - cover.master_blinds_4
 
-all_office_blinds:
-  name: "All Office Blinds"
-  entities:
-    - cover.office_blinds_1
-    - cover.office_blinds_2
+# all_office_blinds:
+#   name: "All Office Blinds"
+#   entities:
+#     - cover.office_blinds_1
+#     - cover.office_blinds_2

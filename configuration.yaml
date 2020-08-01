@@ -40,7 +40,29 @@ sensor: !include_dir_merge_list sensors/
 input_boolean: !include input_boolean.yaml
 script: !include_dir_merge_list scripts/
 scene: !include scenes.yaml
-cover: !include cover.yaml
+#cover: !include cover.yaml {splitting configuration wont work for some reason}
+cover:
+  - platform: group
+    name: Den Blinds
+    entities:
+      - cover.den_blinds_1
+      - cover.den_blinds_2
+      - cover.den_blinds_3
+      - cover.den_blinds_4
+
+  - platform: group
+    name: Master Blinds
+    entities:
+      - cover.master_blinds_1
+      - cover.master_blinds_2
+      - cover.master_blinds_3
+      - cover.master_blinds_4
+
+  - platform: group
+    name: Office Blinds
+    entities:
+      - cover.office_blinds_1
+      - cover.office_blinds_2
 
 zwave:
   # usb_path: /dev/ttyACM0

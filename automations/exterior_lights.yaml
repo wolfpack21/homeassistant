@@ -15,6 +15,11 @@
     - service: light.turn_on
       entity_id:
         - light.outside_front_stoop
+    - service: cover.close_cover
+      entity_id: 
+        - cover.den_blinds
+        - cover.master_blinds
+        - cover.office_blinds
   
 
 
@@ -32,16 +37,3 @@
     - service: light.turn_off
       entity_id:
         - light.outside_front_stoop
-
-# Lower Shades 30 minutes after sunset
-- alias: 'Lower evening shades'
-  trigger:
-    - platform: sun
-      event: sunset
-      offset: '00:30:00'
-  action:
-    - service: cover.close_cover
-      entity_id:
-        - group.all_den_blinds
-        - group.all_master_blinds
-        - group.all_office_blinds

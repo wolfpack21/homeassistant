@@ -1,7 +1,7 @@
 - alias: 'covid wakeup lights'
   trigger:
     - platform: time
-      at: '07:00'
+      at: '06:00:00'
 
   condition:
     condition: time
@@ -14,10 +14,8 @@
 
   action:
     - service: light.turn_on
-      data:
-        entity_id: light.master_cans
-        transition: 255
-        brightness_pct: 60
-    - delay: '00:05:00'
-    - service: light.turn_on
       entity_id: light.master_closet_anne
+    - service: cover.open_cover
+      entity_id: 
+      - cover.master_blinds_1
+      - cover.office_blinds
