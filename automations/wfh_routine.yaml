@@ -1,0 +1,41 @@
+- alias: 'covid wakeup lights'
+  trigger:
+    - platform: time
+      at: '06:00:00'
+
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+
+  action:
+    - service: light.turn_on
+      entity_id: light.master_closet_anne
+    - service: cover.open_cover
+      entity_id: 
+      - cover.master_blinds_1
+      - cover.office_blinds
+    - service: switch.turn_on
+      entity_id: switch.espresso
+
+- alias: 'turn off espresso'
+  trigger:
+    - platform: time
+      at: "09:00:00"
+
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+
+  action:
+    - service: switch.turn_off
+      entity_id: switch.espresso
