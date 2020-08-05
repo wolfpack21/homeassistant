@@ -96,6 +96,8 @@
       state: 'closed'
     group.all_master_blinds:
       state: 'closed'
+    media_player.sony_bravia_tv:
+      state: 'off'
 
 
 #####################################################
