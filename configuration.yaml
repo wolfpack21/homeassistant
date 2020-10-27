@@ -1,6 +1,19 @@
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
+# if default_config is removed, include the following
+#config:
+#history:
+#logbook:
+#map:
+#mobile_app:
+#person:
+#"ssdp:
+#sun:
+#system_health:
+#updater:
+#zerocon:
+
 frontend:
   themes: !include_dir_merge_named themes/
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.

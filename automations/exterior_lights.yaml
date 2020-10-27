@@ -16,16 +16,19 @@
       entity_id:
         - light.outside_front_stoop
     - service: cover.close_cover
-      entity_id: 
-        - cover.den_blinds_1
-        - cover.den_blinds_2
-        - cover.den_blinds_3
-        - cover.master_blinds
-        - cover.office_blinds
-    - service: cover.set_cover_position
-      data:
-        entity_id: cover.den_blinds_4
-        position: 75
+    #   entity_id: 
+    #     - cover.den_blinds_1
+    #     - cover.den_blinds_2
+    #     - cover.den_blinds_3
+    #     - cover.master_blinds
+    #     - cover.office_blinds
+    # - service: cover.set_cover_position
+    #   data:
+    #     entity_id: cover.den_blinds_4
+    #     position: 25
+    # - delay: '02:00'
+    # - service: cover.close_cover
+    #   entity_id: cover.den_blinds_4
 
 
 # Turn outdoor lights off at 11:00 pm      

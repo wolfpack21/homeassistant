@@ -90,11 +90,11 @@
       state: 'off'
     light.master_bath_cans:
       state: 'off'
-    group.all_den_blinds:
+    cover.den_blinds:
       state: 'closed'
-    group.all_office_blinds:
+    cover.office_blinds:
       state: 'closed'
-    group.all_master_blinds:
+    cover.master_blinds:
       state: 'closed'
     media_player.sony_bravia_tv:
       state: 'off'
@@ -139,6 +139,8 @@
     light.entry_chandelier:
       state: 'off'
       transition: 10
+    light.dining_room:
+      state: 'off'
 
 #####################################################
 #                                                   #

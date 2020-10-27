@@ -1,9 +1,7 @@
 - alias: Good Night Blinds
   trigger:
-    - platform: state
-      entity_id: input_boolean.den_blinds_trigger
-      to: 'on'
-      from: 'off'
+    - platform: time
+      at: "19:30:00"
 
   action:
     - service: cover.close_cover
@@ -11,7 +9,12 @@
         - cover.den_blinds_1
         - cover.den_blinds_2
         - cover.den_blinds_3
-        - cover.den_blinds_4
-    - delay: "00:02:00"
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.den_blinds_trigger
+        - cover.office_blinds_1
+        - cover.office_blinds_2
+    - service: cover.set_cover_position
+      data:
+        entity_id: cover.den_blinds_4
+        position: 25
+    - delay: "01:00:00"
+    - service: cover.close_cover
+      entity_id: cover.den_blinds_4
