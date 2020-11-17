@@ -1,0 +1,84 @@
+- alias: "Shelly Button1 - single press - drew"
+  trigger:
+    platform: mqtt
+    topic: "shellies/shellybutton1-lamp_button_drew/input_event/0"
+  condition:
+    condition: template
+    value_template: "{{trigger.payload_json.event == 'S'}}"
+  action:
+    service: switch.toggle
+    entity_id: switch.drew_s_lamp
+
+- alias: "Shelly Button1 - single press - anne"
+  trigger:
+    platform: mqtt
+    topic: "shellies/shellybutton1-lamp_button_anne/input_event/0"
+  condition:
+    condition: template
+    value_template: "{{trigger.payload_json.event == 'S'}}"
+  action:
+    service: switch.toggle
+    entity_id: switch.anne_s_lamp
+
+# https://shelly-api-docs.shelly.cloud/#shelly-button1-mqtt
+# https://indomus.it/guide/integrare-shelly-button1-a-home-assistant-via-mqtt/
+
+- alias: "Shelly Button1 - double press - drew"
+  trigger:
+    platform: mqtt
+    topic: "shellies/shellybutton1-lamp_button_drew/input_event/0"
+  condition:
+    condition: template
+    value_template: "{{trigger.payload_json.event == 'SS'}}"
+  action:
+    service: scene.turn_on
+    entity_id: scene.good_morning_scene
+
+- alias: "Shelly Button1 - double press - anne"
+  trigger:
+    platform: mqtt
+    topic: "shellies/shellybutton1-lamp_button_anne/input_event/0"
+  condition:
+    condition: template
+    value_template: "{{trigger.payload_json.event == 'SS'}}"
+  action:
+    service: scene.turn_on
+    entity_id: scene.good_morning_scene
+
+- alias: "Shelly Button1 - triple press - drew"
+  trigger:
+    platform: mqtt
+    topic: "shellies/shellybutton1-lamp_button_drew/input_event/0"
+  condition:
+    condition: template
+    value_template: "{{trigger.payload_json.event == 'SSS'}}"
+  action:
+    - service: scene.turn_on
+      entity_id: scene.good_night_scene
+    - service: tts.google_translate_say
+      entity_id: media_player.master_bedroom
+      data:
+        message: "Good night, Drew"
+
+- alias: "Shelly Button1 - triple press - anne"
+  trigger:
+    platform: mqtt
+    topic: "shellies/shellybutton1-lamp_button_anne/input_event/0"
+  condition:
+    condition: template
+    value_template: "{{trigger.payload_json.event == 'SSS'}}"
+  action:
+    service: scene.turn_on
+    entity_id: scene.good_night_scene
+
+- alias: "Shelly Button1 - long press"
+  trigger:
+    platform: mqtt
+    topic: "shellies/shellybutton1-lamp_button_drew/input_event/0"
+  condition:
+    condition: template
+    value_template: "{{trigger.payload_json.event == 'L'}}"
+  action:
+    entity_id: media_player.master_bedroom
+    data:
+      message: "May the force be with you"

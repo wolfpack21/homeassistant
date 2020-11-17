@@ -1,4 +1,3 @@
-
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 # if default_config is removed, include the following
@@ -38,14 +37,12 @@ tts:
 # "!include_dir_merge_list automations" does not work
 # Error code below:
 
-# Invalid config for [automation]: not a valid value for dictionary value @ data['action'][0]['entity_id']. 
-#Got None. (See /config/configuration.yaml, line 20). 
+# Invalid config for [automation]: not a valid value for dictionary value @ data['action'][0]['entity_id'].
+#Got None. (See /config/configuration.yaml, line 20).
 #Please check the docs at https://home-assistant.io/components/automation/
-
 
 #!include dir_merge_named does not  work
 #automation: !include_dir_merge_named automations
-
 
 ##############################################
 group: !include groups.yaml
@@ -86,10 +83,12 @@ climate:
   - platform: zwave
   - platform: venstar
     host: 192.168.1.168
+    username: !secret venstar_user
+    password: !secret venstar_pass
 
 speedtestdotnet:
   scan_interval:
-    minutes: 60
+    minutes: 120
   monitored_conditions:
     - ping
     - download
@@ -100,11 +99,11 @@ lutron_caseta:
   keyfile: /ssl/lutron/caseta.key
   certfile: /ssl/lutron/caseta.crt
   ca_certs: /ssl/lutron/caseta-bridge.crt
-  
+
 cloud:
   alexa:
     filter:
-#      include_entities:
+      #include_entities:
       include_domains:
         - switch
         - group
@@ -123,7 +122,7 @@ cloud:
         - scene.flash_kitchen_lights_5
         - scene.good_morning_scene
         - scene.flash_kitchen_lights
-        
+
 august:
   login_method: email
   username: !secret august_user
@@ -148,3 +147,5 @@ august:
 
 #customize: !include customize.yaml
 breaking_changes:
+
+shelly:

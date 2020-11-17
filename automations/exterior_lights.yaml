@@ -1,11 +1,11 @@
 # Turn on outdoor lights at sunset, turn off at 10:30pm
 
 #Turn outdoor lights on 30 minutes before sunset
-- alias: 'turn outdoor lights on'
+- alias: "turn outdoor lights on"
   trigger:
     - platform: sun
       event: sunset
-      offset: '-00:30:00'
+      offset: "-00:30:00"
 
   action:
     - service: switch.turn_on
@@ -16,26 +16,25 @@
       entity_id:
         - light.outside_front_stoop
     - service: cover.close_cover
-    #   entity_id: 
-    #     - cover.den_blinds_1
-    #     - cover.den_blinds_2
-    #     - cover.den_blinds_3
-    #     - cover.master_blinds
-    #     - cover.office_blinds
-    # - service: cover.set_cover_position
-    #   data:
-    #     entity_id: cover.den_blinds_4
-    #     position: 25
-    # - delay: '02:00'
-    # - service: cover.close_cover
-    #   entity_id: cover.den_blinds_4
+      entity_id:
+        - cover.den_blinds_1
+        - cover.den_blinds_2
+        - cover.den_blinds_3
+        - cover.master_blinds
+        - cover.office_blinds
+    - service: cover.set_cover_position
+      data:
+        entity_id: cover.den_blinds_4
+        position: 25
+    - delay: "00:01:00"
+    - service: cover.close_cover
+      entity_id: cover.den_blinds_4
 
-
-# Turn outdoor lights off at 11:00 pm      
-- alias: 'turn outdoor lights off'
+# Turn outdoor lights off at 11:00 pm
+- alias: "turn outdoor lights off"
   trigger:
     - platform: time
-      at: '23:00:00'
+      at: "23:00:00"
 
   action:
     - service: switch.turn_off
